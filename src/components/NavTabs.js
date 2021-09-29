@@ -2,22 +2,24 @@ import React from 'react';
 
 // We declare an object called styles that will contain a few objects for card and heading styles
 const styles = {
-  card: {
-    margin: 20,
-    background: '#e8eaf6',
-    minHeight: 50,
-    lineHeight: 3.5,
+  // card: {
+  //   margin: 20,
+  //   background: '#e8eaf6',
+  //   minHeight: 50,
+  //   lineHeight: 3.5,
 
 
-  },
+  // },
   heading: {
-    background: '#9a74db',
-    minHeight: 50,
-    lineHeight: 3.5,
-    fontSize: '1.2rem',
-    color: 'white',
-    padding: '0 20px',
-    borderRadius: "0px 50px 50px 0px"
+    textAlign: 'center',
+    width: '100%',
+    marginBottom: '1%',
+    padding:'2%',
+    fontSize: '2rem',
+    color:'white',
+    background:'black',
+    alignContent:'center',
+    justifyContent: 'center',
   },
 };
 
@@ -27,9 +29,9 @@ const styles = {
 function NavTabs({ currentPage, handlePageChange }) {
   return (
     <>
-    <span style={styles.heading} class="navbar-brand position-absolute mx-0">
+    <h1 style={styles.heading} class="navbar-brand nav mx-0">
       | Pat Brown |
-    </span>
+    </h1>
     <ul style={styles.card} className="nav nav-tabs justify-content-center">
       <li className="nav-item">
         <a

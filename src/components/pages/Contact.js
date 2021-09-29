@@ -1,22 +1,67 @@
-import React from 'react';
+import React, {useState} from 'react';
+
+const styles = 
 
 export default function Contact() {
+  // Here we set two state variables for firstName and lastName using `useState`
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+
+  const handleInputChange = (e) => {
+    // Getting the value and name of the input which triggered the change
+    const { name, email, message, value } = e.target;
+
+    // Ternary statement that will call either setFirstName or setLastName based on what field the user is typing in
+    return name === 'name' ? setName(value) : setEmail(value) && setMessage(value);
+  };
+
+  const handleFormSubmit = (e) => {
+    // Preventing the default behavior of the form submit (which is to refresh the page)
+    e.preventDefault();
+
+    // Alert the user their first and last name, clear the inputs
+    setName('');
+    setEmail('');
+    setMessage('');
+  };
+
   return (
-    <>
-      <h1>Contact Page</h1>
+    <div className="contactForm">
       <p>
-        Integer cursus bibendum sem non pretium. Vestibulum in aliquet sem, quis
-        molestie urna. Aliquam semper ultrices varius. Aliquam faucibus sit amet
-        magna a ultrices. Aenean pellentesque placerat lacus imperdiet
-        efficitur. In felis nisl, luctus non ante euismod, tincidunt bibendum
-        mi. In a molestie nisl, eu sodales diam. Nam tincidunt lacus quis magna
-        posuere, eget tristique dui dapibus. Maecenas fermentum elementum
-        faucibus. Quisque nec metus vestibulum, egestas massa eu, sollicitudin
-        ipsum. Nulla facilisi. Sed ut erat ligula. Nam tincidunt nunc in nibh
-        dictum ullamcorper. Class aptent taciti sociosqu ad litora torquent per
-        conubia nostra, per inceptos himenaeos. Etiam ornare rutrum felis at
-        rhoncus. Etiam vel condimentum magna, quis tempor nulla.
+        Send me a message so we can connect!
       </p>
-    </>
+      <form className="form">
+        <h4>Your Name:</h4>
+        <input
+          value={name}
+          name="name"
+          onChange={handleInputChange}
+          type="text"
+          placeholder="First Name"
+        />
+        <h4>Your Email:</h4>
+        <input
+          value={email}
+          name="email"
+          onChange={handleInputChange}
+          type="text"
+          placeholder="Last Name"
+        />
+        <h4>Your Message:</h4>
+        <textarea
+          cols="50"
+          rows="10"
+          value={message}
+          name="message"
+          onChange={handleInputChange}
+          type="text"
+          placeholder="Your message to Pat"
+        />
+        <button type="button" onClick={handleFormSubmit}>
+          Submit
+        </button>
+      </form>
+    </div>
   );
 }
