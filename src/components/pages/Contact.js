@@ -1,7 +1,5 @@
 import React, {useState} from 'react';
 
-const styles = 
-
 export default function Contact() {
   // Here we set two state variables for firstName and lastName using `useState`
   const [name, setName] = useState('');
@@ -10,7 +8,7 @@ export default function Contact() {
 
   const handleInputChange = (e) => {
     // Getting the value and name of the input which triggered the change
-    const { name, email, message, value } = e.target;
+    const { name, value } = e.target;
 
     // Ternary statement that will call either setFirstName or setLastName based on what field the user is typing in
     return name === 'name' ? setName(value) : setEmail(value) && setMessage(value);
