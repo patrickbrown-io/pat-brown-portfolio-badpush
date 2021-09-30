@@ -1,5 +1,5 @@
 import React from 'react';
-
+  //  styling
 const styles = {
   imageTile: {
     width:500,
@@ -42,15 +42,16 @@ const projectData = [
     href: 'https://adamkuemmel.github.io/theVibeForecast/',
     repo:'https://github.com/patrickbrown-io/theVibeForecast',
     img:'https://images.unsplash.com/photo-1555580399-49e780f216b7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=3774&q=80',
-  }
+  },
 ];
 
 
 export default function Projects(props) {
   return ( 
     <>
-      <h2>Projects</h2>
-      <p>Here you can find some of my latest projects</p>
+    <h2>Projects</h2>
+    <p>Here you can find some of my latest projects</p>
+    <div className="d-flex justify-content-center flex-row align-items-center align-content-center">
       {projectData.map((project) => (
         <div className="card flex">
         <img style={styles.imageTile} className="card-img-top" src={project.img} alt="Card image cap"/>
@@ -62,6 +63,7 @@ export default function Projects(props) {
       </div>
       </div>
       ))}
+    </div>
     </>
   );
 }

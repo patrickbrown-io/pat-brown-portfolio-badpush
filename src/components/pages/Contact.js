@@ -10,9 +10,6 @@ export default function Contact() {
     // Getting the value and name of the input which triggered the change
     const { name, email, message, value } = e.target;
 
-    // Ternary statement that will call either setFirstName or setLastName based on what field the user is typing in
-    // return name === 'name' ? setName(value) : setEmail(value) && setMessage(value);
-
     if(name==='name'){
       console.log(name)
       return(setName(value))
@@ -35,7 +32,8 @@ export default function Contact() {
   };
 
   return (
-    <div className="contactForm">
+    <>
+    <div className="contactForm d-flex justify-content-center flex-column align-items-center align-content-center">
       <p>
         Send me a message so we can connect!
       </p>
@@ -66,10 +64,12 @@ export default function Contact() {
           type="text"
           placeholder="Your message to Pat"
         />
+        <br />
         <button type="button" onClick={handleFormSubmit}>
           Submit
         </button>
       </form>
     </div>
+    </>
   );
 }

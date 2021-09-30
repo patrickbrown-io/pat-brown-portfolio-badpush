@@ -29,7 +29,7 @@ const styles = {
 function NavTabs({ currentPage, handlePageChange }) {
   return (
     <>
-    <h1 style={styles.heading} class="navbar-brand nav mx-0">
+    <h1 style={styles.heading} className="navbar-brand nav mx-0">
       | Pat Brown |
     </h1>
     <ul style={styles.card} className="nav nav-tabs justify-content-center">
