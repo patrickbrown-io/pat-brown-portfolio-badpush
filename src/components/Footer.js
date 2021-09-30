@@ -80,7 +80,7 @@ function Footer() {
           target="_blank"
           rel="noreferrer"
           style={styles.navlink}   
-          href="#project"
+          href="https://patrickbrown-io.github.io/patrick-brown-portfolio/assets/Patrick%20Brown%20-%20Web%20Developer.pdf"
           onClick={() => console.log('Projects')}
         >
           Resume
@@ -91,8 +91,7 @@ function Footer() {
           target="_blank"
           rel="noreferrer"
           style={styles.navlink}
-          href="#contact"
-          onClick={() => console.log("Hello!")}
+          href="tel:8123229561"
         >
           Call
         </a>
@@ -102,12 +101,11 @@ function Footer() {
           target="_blank"
           rel="noreferrer"
           style={styles.navlink}
-          href="#contact"
-          onClick={() => console.log("Hello!")}
+          href="mailto:patbrowndesigns@gmail.com"
         >
 
 
-          text
+          Email
 
 
         </a>
