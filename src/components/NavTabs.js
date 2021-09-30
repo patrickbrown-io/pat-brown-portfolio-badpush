@@ -17,7 +17,7 @@ const styles = {
     padding:'2%',
     fontSize: '2rem',
     color:'white',
-    background:'black',
+    backgroundColor:'black',
     alignContent:'center',
     justifyContent: 'center',
   },
