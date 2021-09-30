@@ -13,13 +13,22 @@ const styles = {
   heading: {
     textAlign: 'center',
     width: '100%',
-    marginBottom: '1%',
-    padding:'2%',
     fontSize: '2rem',
     color:'white',
     backgroundColor:'black',
     alignContent:'center',
     justifyContent: 'center',
+    paddingBottom: '1%'
+  },
+    smHeading: {
+    textAlign: 'center',
+    width: '100%',
+    fontSize: '1rem',
+    color:'white',
+    backgroundColor:'black',
+    alignContent:'center',
+    justifyContent: 'center',
+    margin:0
   },
 };
 
@@ -32,7 +41,7 @@ function NavTabs({ currentPage, handlePageChange }) {
     <h1 style={styles.heading} className="navbar-brand nav mx-0">
       | Pat Brown |
     </h1>
-    <ul style={styles.card} className="nav nav-tabs justify-content-center">
+    <ul style={styles.smHeading} className="nav nav-tabs justify-content-center">
       <li className="nav-item">
         <a
           href="#home"
