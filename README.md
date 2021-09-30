@@ -3,10 +3,13 @@
 ## Description
 
 My portfolio, showcasing my most recent University of Denver Full Stack Development projects and code.
+Developed with React.
 
 ## Installation / Useage
 
-- To see the porfolio, visit my [Live Deployment](https://patrickbrown-io.github.io/patrick-brown-portfolio/)
+![Live Deploy](assets/ReactApp.gif)
+
+- To see the porfolio, visit my [Live Deployment](https://patrickbrown-io.github.io/pat-brown-portfolio/)
 
 ## Credits
 
