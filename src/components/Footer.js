@@ -52,7 +52,7 @@ const styles = {
 function Footer() {
   return (
     <>
-    <ul style={styles.footer} className="nav">
+    <ul style={styles.footer} className="nav position-fixed h100 b0">
       <li className="nav-item" style={styles.ul}>
         <a
           target="_blank"
